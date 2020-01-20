@@ -79,6 +79,12 @@ else
 }
 }
 function max(number) {
+  if (!number || number.length < 3 || number.length % 2 == 0) {
+     return undefined;
+   }
+   if (number.some(isNaN)) {
+     return undefined;
+   }
   let first_element = number[0]
   let last_element = number[number.length-1]
   let middle_element = number[((number.length/2)-1) + 0.5]
@@ -96,7 +102,21 @@ return first_element;
 }
 
 function middle(values) {
-  // write your code here
+let middlearray=[]
+if(!values||values.length<3||values.length%2==0)
+{
+  return middlearray
+}
+let lower=0;
+let upper=values.length-1;
+let middle =lower+upper;
+middle=middle/2;
+let lowermiddle= middle-1;
+let uppermiddle=middle+1;
+middlearray.push(values[lowermiddle]);
+middlearray.push(values[middle]);
+middlearray.push(values[uppermiddle]);
+return middlearray;
 }
 
 function increasing(numbers) {
