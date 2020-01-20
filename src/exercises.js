@@ -45,10 +45,38 @@ return newvalues
 }
 
 function difference(numbers) {
+  let location=0
+let length=0
+  let number = 0
+  let maxnumber=0
+  let minnumber=0
+  let difference = 0
   if (!numbers||numbers.length==0) {
-    
+    return undefined
   }
-
+  else if (numbers.some(isNaN)){
+    return undefined
+  }
+else
+   length = numbers.length-1
+{
+  while(numbers[location]<length)
+  {
+    number=numbers[location]
+    location+1
+    if (number>number[location])
+    {maxnumber=number}
+  }
+  while(numbers[location]<length)
+  {
+    number=numbers[location]
+    location+1
+    if (number<number[location])
+    {minnumber=number}
+  }
+  difference=maxnumber-minnumber
+  return difference
+}
 }
 function max(number) {
   // write your code here
