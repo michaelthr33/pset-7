@@ -79,7 +79,20 @@ else
 }
 }
 function max(number) {
-  // write your code here
+  let first_element = number[0]
+  let last_element = number[number.length-1]
+  let middle_element = number[((number.length/2)-1) + 0.5]
+  if ((first_element > last_element) & (first > middle)) {
+    return first_element;
+  }
+  else if ((middle_element > last_element) & (middle_element > first_element)) {
+    return middle_element;
+  }
+else if ((last_element > first_element) & (last_element > middle_element)) {
+    return last_element;
+  }
+  else {
+return first_element;
 }
 
 function middle(values) {
