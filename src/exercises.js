@@ -246,9 +246,10 @@ function clumps(values) {
   if (!values) {
     return -1;
   }
-  if (values.length < 2)
+  if (values.length < 2){
     return 0;
   }
+
   let lastvalue = values[0];
   let now;
   let clump = 0
@@ -294,4 +295,5 @@ module.exports = {
   consecutive,
   balance,
   clumps
+}
 };
